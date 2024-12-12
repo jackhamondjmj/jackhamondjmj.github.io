@@ -1,42 +1,3 @@
-/* General Styling for the Body */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4; /* Light background */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Header Styling */
-header {
-    background-color: #333; /* Dark background for the header */
-    color: white;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-}
-
-/* Main Content */
-main {
-    padding: 20px;
-}
-
-/* Section Styling */
-section {
-    background-color: #fff; /* White background for section */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2, h3, h4 {
-    font-size: 24px;
-    color: #333;
-}
-
 /* Basic styling for audio container and controls */
 .audio-container {
     display: flex;
@@ -126,43 +87,4 @@ h2, h3, h4 {
 /* Download button hover effect */
 .download-button:hover {
     background-color: #333333; /* Darker gray */
-}
-
-/* Footer Styling */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-}
-
-/* General Layout */
-.audio-container {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.audio-controls {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-/* Responsiveness */
-@media screen and (max-width: 768px) {
-    .audio-controls {
-        flex-direction: column; /* Stack controls vertically on smaller screens */
-    }
-
-    .volume-control,
-    .progress-bar {
-        width: 80%; /* Adjust size of controls for smaller screens */
-    }
-
-    .control-button {
-        margin: 10px 0;
-    }
 }

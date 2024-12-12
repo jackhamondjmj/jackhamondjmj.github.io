@@ -4,9 +4,24 @@
     font-size: 20px; /* Font size for the link */
     display: flex;
     align-items: center; /* Align the arrow and text vertically */
+    color: #faf3e0; /* Burgundy color for the text and arrow */
+    transition: color 0.3s ease; /* Smooth color transition for hover */
 }
 
+/* Styling the arrow */
 .back-arrow {
     font-size: 18px; /* Larger size for the arrow */
     margin-right: 8px; /* Space between the arrow and text */
+    color: inherit; /* Inherit the color from the parent link */
+    transition: color 0.3s ease; /* Smooth color transition for hover */
+}
+
+/* Hover effect for the link */
+.back-arrow-link:hover {
+    color: #f0e1b0; /* Hover color for both text and arrow (soft gold) */
+}
+
+/* Hover effect for the arrow */
+.back-arrow-link:hover .back-arrow {
+    color: #f0e1b0; /* Hover color for the arrow (soft gold) */
 }

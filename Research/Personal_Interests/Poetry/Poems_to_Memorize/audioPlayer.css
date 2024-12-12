@@ -1,3 +1,42 @@
+/* General Styling for the Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light background */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    background-color: #333; /* Dark background for the header */
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Section Styling */
+section {
+    background-color: #fff; /* White background for section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3, h4 {
+    font-size: 24px;
+    color: #333;
+}
+
 /* Basic styling for audio container and controls */
 .audio-container {
     display: flex;
@@ -16,7 +55,7 @@
 
 /* Styling for buttons */
 .control-button {
-    background-color: #D4AF37;
+    background-color: #D4AF37; /* Gold color */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -26,8 +65,9 @@
     transition: background-color 0.3s ease;
 }
 
+/* Button hover effect */
 .control-button:hover {
-    background-color: #C1962A;
+    background-color: #C1962A; /* Darker gold */
 }
 
 /* Styling for volume control */
@@ -46,12 +86,13 @@
     border-radius: 5px;
 }
 
+/* Styling for the slider thumb */
 .progress-bar::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 15px;
     height: 15px;
-    background: #D4AF37;
+    background: #D4AF37; /* Gold color */
     border-radius: 50%;
     cursor: pointer;
 }
@@ -59,7 +100,7 @@
 .progress-bar::-moz-range-thumb {
     width: 15px;
     height: 15px;
-    background: #D4AF37;
+    background: #D4AF37; /* Gold color */
     border-radius: 50%;
     cursor: pointer;
 }
@@ -73,7 +114,7 @@
 
 /* Download button styling */
 .download-button {
-    background-color: #4A4A4A;
+    background-color: #4A4A4A; /* Dark gray */
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -82,6 +123,46 @@
     transition: background-color 0.3s ease;
 }
 
+/* Download button hover effect */
 .download-button:hover {
-    background-color: #333333;
+    background-color: #333333; /* Darker gray */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* General Layout */
+.audio-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.audio-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .audio-controls {
+        flex-direction: column; /* Stack controls vertically on smaller screens */
+    }
+
+    .volume-control,
+    .progress-bar {
+        width: 80%; /* Adjust size of controls for smaller screens */
+    }
+
+    .control-button {
+        margin: 10px 0;
+    }
 }

@@ -1,26 +1,53 @@
-// Get references to the audio player, buttons, and controls
+// Get references to elements
 const audioPlayer = document.getElementById('audioPlayer');
 const playButton = document.getElementById('playButton');
-const backButton = document.getElementById('backButton');
+const progressBar = document.getElementById('progressBar');
+const timeDisplay = document.getElementById('timeDisplay');
 const volumeControl = document.getElementById('volumeControl');
+const backButton = document.getElementById('backButton');
 
-// Play/Pause Functionality
+// Update the time format to MM:SS
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    return `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
+}
+
+// Update progress bar and time display
+function updateProgress() {
+    const currentTime = audioPlayer.currentTime;
+    const duration = audioPlayer.duration;
+    progressBar.value = (currentTime / duration) * 100;
+    timeDisplay.textContent = `${formatTime(currentTime)}/${formatTime(duration)}`;
+}
+
+// Play/Pause functionality
 playButton.addEventListener('click', () => {
     if (audioPlayer.paused) {
         audioPlayer.play();
-        playButton.textContent = 'Pause'; // Change the button text to 'Pause'
+        playButton.textContent = 'Pause';
     } else {
         audioPlayer.pause();
-        playButton.textContent = 'Play'; // Change the button text to 'Play'
+        playButton.textContent = 'Play';
     }
 });
 
-// Back 10 Seconds Functionality
-backButton.addEventListener('click', () => {
-    audioPlayer.currentTime = Math.max(0, audioPlayer.currentTime - 10); // Move back 10 seconds, but not before 0
+// Volume control functionality
+volumeControl.addEventListener('input', () => {
+    audioPlayer.volume = volumeControl.value;
 });
 
-// Volume Control Functionality
-volumeControl.addEventListener('input', () => {
-    audioPlayer.volume = volumeControl.value; // Set the volume based on the slider
+// Back 10 seconds functionality
+backButton.addEventListener('click', () => {
+    audioPlayer.currentTime -= 10;
+});
+
+// Update progress and time every second
+audioPlayer.addEventListener('timeupdate', updateProgress);
+
+// Allow user to click on the progress bar to change the position
+progressBar.addEventListener('input', () => {
+    const duration = audioPlayer.duration;
+    const value = progressBar.value;
+    audioPlayer.currentTime = (value / 100) * duration;
 });

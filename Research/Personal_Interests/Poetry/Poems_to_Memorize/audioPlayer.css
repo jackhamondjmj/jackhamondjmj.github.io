@@ -16,7 +16,7 @@
 
 /* Styling for buttons */
 .control-button {
-    background-color: #4CAF50;
+    background-color: #D4AF37;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -27,7 +27,7 @@
 }
 
 .control-button:hover {
-    background-color: #45a049;
+    background-color: #C1962A;
 }
 
 /* Styling for volume control */
@@ -51,7 +51,7 @@
     appearance: none;
     width: 15px;
     height: 15px;
-    background: #4CAF50;
+    background: #D4AF37;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -59,7 +59,7 @@
 .progress-bar::-moz-range-thumb {
     width: 15px;
     height: 15px;
-    background: #4CAF50;
+    background: #D4AF37;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -73,7 +73,7 @@
 
 /* Download button styling */
 .download-button {
-    background-color: #2196F3;
+    background-color: #4A4A4A;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -83,5 +83,5 @@
 }
 
 .download-button:hover {
-    background-color: #0b7dda;
+    background-color: #333333;
 }

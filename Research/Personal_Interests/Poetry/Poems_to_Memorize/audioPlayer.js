@@ -17,7 +17,11 @@ function formatTime(seconds) {
 function updateProgress() {
     const currentTime = audioPlayer.currentTime;
     const duration = audioPlayer.duration;
+    
+    // Update progress bar value
     progressBar.value = (currentTime / duration) * 100;
+
+    // Update time display with current time and total time
     timeDisplay.textContent = `${formatTime(currentTime)}/${formatTime(duration)}`;
 }
 
@@ -42,7 +46,7 @@ backButton.addEventListener('click', () => {
     audioPlayer.currentTime -= 10;
 });
 
-// Update progress and time every second
+// Update progress and time every second while playing
 audioPlayer.addEventListener('timeupdate', updateProgress);
 
 // Allow user to click on the progress bar to change the position
@@ -50,4 +54,11 @@ progressBar.addEventListener('input', () => {
     const duration = audioPlayer.duration;
     const value = progressBar.value;
     audioPlayer.currentTime = (value / 100) * duration;
+});
+
+// Initialize the progress bar and time display when the audio is loaded
+audioPlayer.addEventListener('loadeddata', () => {
+    progressBar.max = 100;
+    progressBar.value = 0;
+    timeDisplay.textContent = `${formatTime(0)}/${formatTime(audioPlayer.duration)}`;
 });

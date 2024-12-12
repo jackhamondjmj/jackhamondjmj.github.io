@@ -1,6 +1,7 @@
-// Get references to the audio player, play button, and volume control
+// Get references to the audio player, buttons, and controls
 const audioPlayer = document.getElementById('audioPlayer');
 const playButton = document.getElementById('playButton');
+const backButton = document.getElementById('backButton');
 const volumeControl = document.getElementById('volumeControl');
 
 // Play/Pause Functionality
@@ -14,7 +15,12 @@ playButton.addEventListener('click', () => {
     }
 });
 
+// Back 10 Seconds Functionality
+backButton.addEventListener('click', () => {
+    audioPlayer.currentTime = Math.max(0, audioPlayer.currentTime - 10); // Move back 10 seconds, but not before 0
+});
+
 // Volume Control Functionality
 volumeControl.addEventListener('input', () => {
-    audioPlayer.volume = volumeControl.value;
+    audioPlayer.volume = volumeControl.value; // Set the volume based on the slider
 });

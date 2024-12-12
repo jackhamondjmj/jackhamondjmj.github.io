@@ -6,17 +6,17 @@
 
 /* The text you hover over */
 .hover-text {
-  color: #800020; /* Your burgundy color */
+  color: #333;
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* The tooltip (hidden by default) */
 .tooltip {
   visibility: hidden;
-  width: 200px; /* Adjust the width as needed */
+  width: auto; /* Adjust the width as needed */
   background-color: #faf3e0; /* Light cream background */
-  color: #333333; /* Dark text for readability */
+  color: #333; /* Dark text for readability */
   text-align: center;
   padding: 10px;
   border-radius: 5px;

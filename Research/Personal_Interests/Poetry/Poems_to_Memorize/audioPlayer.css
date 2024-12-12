@@ -14,7 +14,7 @@
     margin-top: 10px;
 }
 
-.play-button, .download-button {
+.control-button {
     background-color: #4CAF50; 
     color: white; 
     border: none;
@@ -23,10 +23,24 @@
     border-radius: 5px;
 }
 
-.play-button:hover, .download-button:hover {
+.control-button:hover {
     background-color: #45a049;
 }
 
 .volume-control {
     width: 100px;
+}
+
+.download-button {
+    background-color: #FF5733; 
+    color: white; 
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.download-button:hover {
+    background-color: #e74c3c;
 }

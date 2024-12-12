@@ -1,0 +1,90 @@
+/* Basic styling for audio container and controls */
+.audio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Styling for buttons */
+.control-button {
+    background-color: #D4AF37; /* Gold color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.control-button:hover {
+    background-color: #C1962A; /* Darker gold */
+}
+
+/* Styling for volume control */
+.volume-control {
+    width: 100px;
+}
+
+/* Styling for progress bar */
+.progress-bar {
+    width: 300px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+/* Styling for the slider thumb */
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #D4AF37; /* Gold color */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.progress-bar::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #D4AF37; /* Gold color */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Styling for time display */
+#timeDisplay {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Download button styling */
+.download-button {
+    background-color: #4A4A4A; /* Dark gray */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Download button hover effect */
+.download-button:hover {
+    background-color: #333333; /* Darker gray */
+}

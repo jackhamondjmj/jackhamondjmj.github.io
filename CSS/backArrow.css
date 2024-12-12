@@ -1,0 +1,12 @@
+/* Styling the link and back arrow */
+.back-arrow-link {
+    text-decoration: none; /* Removes underline from the link */
+    font-size: 20px; /* Font size for the link */
+    display: flex;
+    align-items: center; /* Align the arrow and text vertically */
+}
+
+.back-arrow {
+    font-size: 18px; /* Larger size for the arrow */
+    margin-right: 8px; /* Space between the arrow and text */
+}

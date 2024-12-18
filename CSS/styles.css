@@ -3,7 +3,7 @@ body {
   font-family: 'Times New Roman', Times, serif;
   margin: 20px 20px;
   padding: 0;
-  background-color: #faf3e0;  /* Light cream background */
+  background-color: #faf3e0 !important;  /* Light cream background */
   color: #333;  /* Dark text color for readability */
 }
 

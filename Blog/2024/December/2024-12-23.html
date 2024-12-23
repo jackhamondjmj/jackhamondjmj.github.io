@@ -16,12 +16,19 @@
         body {
           align-items: center;
         }
-        iframe {
-          width: 80%; 
-          max-width: 1000px; 
-          height: 800px;
-        border: none; 
-  }
+        .responsive-pdf {
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+          aspect-ratio: 16/9;
+          border: none;
+        }
+        @media (max-width: 768px) {
+          .responsive-pdf {
+                width: 100%;
+                height: auto;
+          }
+        }
     </style>
 </head>
 <body>
@@ -50,7 +57,7 @@
             <p>This year, my wife and I have continued the tradition of praying the St. Andrew Novena. It is a beautiful novena which begins on the Feast of St. Andrew (November 30th) and ends on Christmas Eve. It is prayed fifteen times per day. The novena is also known as the Christmas Anticipation Prayer and the St. Andrew Christmas Miracle Novena. When we began praying it this year, we prayed the prayer 15 times immediately following our daily rosary. We found it prudent&mdash;to make our meditations more fruitful&mdash;to break it up into three segments of five when possible. The prayer is a good length for committing to memory within the first couple of days. I created a PDF with the words of the prayer and an image, which is available below. The <a href="https://www.catholictradition.org/Mary/standrew-novena2.jpg" style="text-decoration: none; color: inherit;">image</a> is taken from <a href="https://www.catholictradition.org/" style="text-decoration: none; color: inherit;">catholictradition.org</a>. I will also include the Latin text.</p>
             <h2>St. Andrew Novena</h2>
             <p><i>And the Word was made flesh and dwelt amongst us.</i>
-            <iframe src="../../../Media/PDF/st_andrew_novena.pdf"></iframe><br>
+            <iframe src="../../../Media/PDF/st_andrew_novena.pdf" class="responsive-pdf"></iframe><br>
             <i>God hath visited His people.<br>St. Andrew, pray for us.</i></p>
             <h3>Latin Text</h3>
             <p><i>Et Verbum caro factum est et habitávit in nobis.</i><br>

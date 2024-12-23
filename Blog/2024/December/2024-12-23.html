@@ -13,10 +13,25 @@
           height: auto; 
           opacity: 1
         }
-        .pdf-preview-link:hover {
+        .pdf-preview {
+            display: none;
+            width: 150px; /* Set desired size of the preview image */
+            margin-top: 10px;
+        }
+        .pdf-preview-link span {
+            font-size: 16px;
+            color: #007BFF;
             cursor: pointer;
+            text-decoration: none;
+        }
+        .pdf-preview-link:hover .pdf-preview {
+            display: block;
+        }
+
+        .pdf-preview-link:hover span {
             text-decoration: underline;
         }
+        
     </style>
 </head>
 <body>
@@ -46,11 +61,17 @@
             <h2>St. Andrew Novena</h2>
             <p><i>And the Word was made flesh and dwelt amongst us.</i><br><br>
             <!--<a href="../../../Media/PDF/st_andrew_novena.pdf" target="_blank" class="pdf-preview-link"><button>Click to View St. Andrew Novena</button></a><br><br>-->
-
-            <a href="../../../Media/PDF/st_andrew_novena.pdf" target="_blank">
+            <!--<a href="../../../Media/PDF/st_andrew_novena.pdf" target="_blank">
                 <img src="../../../Media/JPG/st_andrew_novena.jpg" alt="Preview of St. Andrew Novena" class="responsive-pdf-preview" />
+            </a>-->
+
+
+            <a href="../../../Media/PDF/st_andrew_novena.pdf" target="_blank" class="pdf-preview-link">
+                <span>Click to View St. Andrew Novena</span>
+                <img src="../../../Media/JPG/st_andrew_novena.jpg" alt="Preview of St. Andrew Novena" class="pdf-preview" />
             </a>
 
+                
             
             <i>God hath visited His people.<br>St. Andrew, pray for us.</i></p>
             <h3>Latin Text</h3>

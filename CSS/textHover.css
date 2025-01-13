@@ -18,6 +18,8 @@
   background-color: #faf3e0; /* Light cream background */
   color: #333; /* Dark text for readability */
   text-align: center;
+  padding: 10px;
+  border-radius: 5px;
   position: absolute;
   bottom: 110%; /* Position above the text */
   left: 50%;

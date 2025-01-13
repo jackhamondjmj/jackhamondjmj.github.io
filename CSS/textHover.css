@@ -14,7 +14,7 @@
 /* The tooltip (hidden by default) */
 .tooltip {
   visibility: hidden;
-  width: auto; /* Adjust the width as needed */
+  width: 100%; /* Adjust the width as needed */
   background-color: #faf3e0; /* Light cream background */
   color: #333; /* Dark text for readability */
   text-align: center;
@@ -27,10 +27,4 @@
   z-index: 1;
   opacity: 0;
   transition: opacity 0.3s ease;
-}
-
-/* Show the tooltip when hovering over the text */
-.hover-container:hover .tooltip {
-  visibility: visible;
-  opacity: 1;
 }
